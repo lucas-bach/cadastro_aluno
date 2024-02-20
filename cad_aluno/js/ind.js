@@ -6,4 +6,4 @@ document.getElementById('cep').addEventListener('blur', function() {
             document.getElementById('endereco').value = `${data.logradouro}, ${data.bairro}, ${data.localidade} - ${data.uf}`;
         })
         .catch(error => console.error('Erro ao buscar CEP:', error));
-}
+});
