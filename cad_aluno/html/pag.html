@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Alunos</title>
-    <link rel="stylesheet" href="/novo/css/pag.css">
+    <link rel="stylesheet" href="../css/pag.css">
 </head>
 <body>
     <h1>Cadastro de Alunos</h1>
-    <form id="cadastroForm" method="post" action="processa_form.php">
+    <form id="cadastroForm" method="post" action="../php/salvar.php">
         <label for="nomeCompleto">Nome Completo:</label>
         <input type="text" id="nomeCompleto" name="nomeCompleto" required>
         
@@ -19,10 +19,10 @@
         <input type="date" id="dataNascimento" name="dataNascimento" required>
         
         <label for="telefone">Telefone :</label>
-        <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2}[0-9]{4,5}[0-9]{4}" placeholder="( ) " required>
+        <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2}[0-9]{4,5}[0-9]{4}" placeholder="( ) " >
         
         <label for="cep">CEP:</label>
-        <input type="text" id="cep" name="cep" pattern="[0-9]{5}-[0-9]{3}" placeholder="XXXXX-XXX" required>
+        <input type="text" id="cep" name="cep" pattern="[0-9]{5}-[0-9]{3}" placeholder="XXXXX-XXX">
         
         <label for="endereco">Endereço:</label>
         <input type="text" id="endereco" name="endereco" required readonly>
@@ -32,17 +32,14 @@
         
         <label for="plano">Plano:</label>
         <select id="plano" name="plano" required>
-            <option value="" disabled selected>Selecione o plano</option>
-            <option value="mensal">Mensal</option>
-            <option value="anual">Anual</option>
+            <option value="0" disabled selected>Selecione o plano</option>
+            <option value="1">Mensal</option>
+            <option value="2">Anual</option>
         </select>
         
         <button type="submit">Cadastrar</button>
     </form>
 
-    <script src="/novo/js/pag.js"></script>
-
-    
-
+    <script src="../js/pag.js"></script>
 </body>
 </html>
