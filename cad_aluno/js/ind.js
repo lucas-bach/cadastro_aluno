@@ -7,3 +7,14 @@ document.getElementById('cep').addEventListener('blur', function() {
         })
         .catch(error => console.error('Erro ao buscar CEP:', error));
 });
+
+let form = document.getElementById('cadastroForm');
+
+const salvar = async (e) => {
+    e.preventDefault();
+    const data = new URLSearchParams();
+    for (const pair of new FormData(form)) {
+        data.append(pair[0], pair[1]);
+    }
+
+}    
