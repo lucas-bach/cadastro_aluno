@@ -14,12 +14,19 @@
 <script type="text/javascript">
 
 $( document ).ready(async function() {
-    $.getJSON( "../php/listar_alunos.php", function( data ){
+   /*$.getJSON( "../php/listar_alunos.php", function( data ){
         $.each(data, function(index, aluno){
             $("#app").append(index + ':&nbsp;'+aluno.nome_completo+"<br/>");
         });
-    });    
+    });*/
+    
+    let alunos = await get_lista();
+    $.each(alunos, function(index, aluno){
+            $("#app").append(index + ':&nbsp;'+aluno.nome_completo+"<br/>");
+        });
+    
 })
+
 </script>
 
 
