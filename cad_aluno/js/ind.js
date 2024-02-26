@@ -17,4 +17,13 @@ const salvar = async (e) => {
         data.append(pair[0], pair[1]);
     }
 
+    const result = await fetch('../php/salvar.php', {
+        method: 'post',
+        body: data,
+    });
+
+    let res = await result.json();
+
+
+
 }    
