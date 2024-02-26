@@ -13,6 +13,13 @@
 
 <script type="text/javascript">
 
+$( document ).ready(async function() {
+    $.getJSON( "../php/listar_alunos.php", function( data ){
+        $.each(data, function(index, aluno){
+            $("#app").append(index + ':&nbsp;'+aluno.nome_completo+"<br/>");
+        });
+    });    
+})
 </script>
 
 
