@@ -24,6 +24,18 @@ const salvar = async (e) => {
 
     let res = await result.json();
 
+    if(res.sucesso){
+        alert('Salvo com sucesso: '+res.matricula);
+        window.location = 'pag33.html'
+    }
+    else{
+        alert(res.msg);
+    }
+   
+}
+
+form.addEventListener('submit', salvar);
 
 
-}    
+
+  
