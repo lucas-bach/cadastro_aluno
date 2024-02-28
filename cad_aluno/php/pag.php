@@ -12,6 +12,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $endereco = utf8_decode($_POST['endereco']);
     $numero = $_POST['numero'];
     $plano = $_POST['plano'];
+
+    echo '<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de Alunos</title>
+        <link rel="stylesheet" href="../css/pag.css">
+    </head>
+    <body>';
+    echo "<h1>{$endereco}</h1>";
+    echo '</body></html>';
+    exit(0);
 }
 ?>
     
