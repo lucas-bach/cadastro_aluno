@@ -27,6 +27,12 @@ $( document ).ready(async function() {
     
 })
 
+async function get_lista(){
+    const response = await fetch("../php/listar_alunos.php");
+    const alunos = await response.json();
+    return alunos;
+}
+
 </script>
 
 
