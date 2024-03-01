@@ -27,6 +27,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit(0);
 
     $conn = conectar_db();
+
+    // Verifica se a conexão foi bem-sucedida
+    if (!$conn) {
+        die(json_encode("Falha na conexão com o banco de dados"));
+    }
+
+    // Gera um número de matrícula (pode ser um número aleatório neste exemplo)
+    $numeroMatricula = mt_rand(100000, 999999);
 }
 ?>
     
