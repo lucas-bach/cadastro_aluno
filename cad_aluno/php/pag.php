@@ -35,6 +35,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Gera um número de matrícula (pode ser um número aleatório neste exemplo)
     $numeroMatricula = mt_rand(100000, 999999);
+
+    // Prepara e executa a consulta SQL para inserir os dados no banco de dados
+    $sql = "INSERT INTO alunos (nome_completo, idade, data_nascimento, telefone, endereco, numero, plano, numero_matricula) VALUES ('$nomeCompleto', '$idade', '$dataNascimento', '$telefone', '$endereco', '$numero', '$plano', '$numeroMatricula')";
+
+    $saida = array();
+
+
 }
 ?>
     
